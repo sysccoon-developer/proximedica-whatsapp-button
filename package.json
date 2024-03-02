@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "minify-all": "rm -rf public; mkdir -p public/js public/css; npm run minify:js; npm run minify:css; npm run minify:html",
-    "minify:js": "uglifyjs src/js/main.js -c -m -o public/js/main.min.js",
-    "minify:css": "cleancss src/css/main.css -o public/css/main.min.css",
-    "minify:html": "html-minifier src/index.html -o public/index.min.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype"
+    "minify-all": "rm -rf docs; mkdir -p docs/js docs/css; npm run minify:js; npm run minify:css; npm run minify:html",
+    "minify:js": "uglifyjs src/js/main.js -c -m -o docs/js/main.min.js",
+    "minify:css": "cleancss src/css/main.css -o docs/css/main.min.css",
+    "minify:html": "html-minifier src/index.html -o docs/index.min.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype"
   },
   "author": "Sysccoon",
   "license": "ISC",
