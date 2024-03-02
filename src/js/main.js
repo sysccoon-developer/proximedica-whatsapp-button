@@ -4,8 +4,7 @@ window.addEventListener('load', () => {
     const whatsContainer = document.getElementById('whatsContainer');
     const closeButtons = document.querySelectorAll('.close-btn');
 
-    const pageWrapper = document.getElementsByTagName('page_wrapper')[0]
-
+    const pageWrapper = document.getElementById('page_wrapper');
     if (pageWrapper) pageWrapper.appendChild(whatsWrapper);
 
     whatsButton.addEventListener('click', () => {
