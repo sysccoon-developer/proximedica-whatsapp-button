@@ -89,13 +89,14 @@ body {
   cursor: pointer;
   margin: 20px 0 0 0;
 }
-.close-btn > i { font-size: 1.5rem; transition: 1s; }
+.close-btn > i { font-size: 2rem; transition: 1s; }
 .close-btn > i:hover { 
   transform: rotate(270deg); 
   transform-origin: 50% 50%;
   transition: 1s;
 }
 .whats-body { height: auto; overflow-y: scroll; }
+.whats-main-btn > i { font-size: 2rem !important; }
 .whats-btn {
   cursor: pointer;
   text-decoration: none;
@@ -106,6 +107,9 @@ body {
 .whats-btn:hover {
   background-color: #0c3f13;
   transition: 1s;
+}
+.whats-btn > i {
+  font-size: 2rem;
 }
 .call-btn {
   text-decoration: none;
