@@ -7,7 +7,45 @@ body {
   height: 100% !important;
   width: 100%;
 }
+.whats-text-white { color: white; }
+.whats-d-flex { display: flex; }
+.whats-justify-between { justify-content: space-between; }
+.whats-flex-column { flex-direction: column; }
+.whats-flex-row { flex-direction: row; }
+.whats-align-items-center { align-items: center; }
+.whats-px-5 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.whats-px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.whats-py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.whats-py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.whats-py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.whats-m-0 { margin: 0 }
+.whats-mt-4 { margin-top: 16px; }
+.whats-mt-0 { margin-top: 0; }
+.whats-mt-auto { margin-top: auto; }
+.whats-border-bottom { border-bottom: 0.5px solid #bbb; }
+.whats-border-top { border-top: 0.5px solid #bbb; }
+.whats-col-3 { width: 24.99%; }
+.whats-col-6 { width: 49.98%; }
+.whats-text-center { text-align: center; }
+.whats-text-success { color:#25D366; text-decoration: none !important; }
+
 .float-whatsapp-left-b {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: 0.5s;
   width: 240px;
   position: fixed;
@@ -32,12 +70,14 @@ body {
 }
 .float-whatsapp-left-b { bottom: 4%; }
 .whats-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: 0.5s;
   transform: translate(-1000px);
   height: 100%;
   position: fixed;
   z-index: 9999;
   background-color: #fff;
+  border-radius: 15px;
 }
 .show-whats {
   transition: 0.5s;
@@ -48,31 +88,48 @@ body {
   cursor: pointer;
   margin: 20px 0 0 0;
 }
+.close-btn > i { font-size: 1.5rem; transition: 1s; }
+.close-btn > i:hover { 
+  transform: rotate(270deg); 
+  transform-origin: 50% 50%;
+  transition: 1s;
+}
 .whats-body { height: auto; overflow-y: scroll; }
-.close-btn > i { font-size: 2rem; }
 .whats-btn {
   cursor: pointer;
+  text-decoration: none;
   border-radius: 5px 5px 0 0;
   background-color: #30bf42;
+  transition: 1s;
+}
+.whats-btn:hover {
+  background-color: #0c3f13;
+  transition: 1s;
 }
 .call-btn {
+  text-decoration: none;
   border-radius: 0 0 5px 5px;
   background-color: #1463a6;
+  transition: 1s;
 }
+.call-btn:hover {
+  background-color: #022c51;
+  transition: 1s;
+}
+
 @media only screen and (min-width: 768px ) {
   .whats-container {
     height: auto;
-    max-height: 650px;
     width: 450px;
     left: 6%;
-    bottom: 6%;
+    bottom: 4%;
     top: auto;
     border-radius: 5px;
     box-shadow: 0 10px 15px #666;
   }
   .show-whats { display: block; }
   .whats-header { border-radius: 5px 5px 0 0; }
-  .whats-body { min-height: 400px; height: auto; overflow: scroll; }
+  .whats-body { max-height: 600px; min-height: 400px; height: auto; overflow: scroll; }
   .float-whatsapp-left-b { left: 6%; }
   .float-whatsapp-left-b > i { font-size: 1.5rem; }
 }
