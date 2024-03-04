@@ -1,22 +1,17 @@
 window.addEventListener('load', () => {
-    const whatsWrapper = document.getElementById('whatsWrapper');
     const whatsButton = document.getElementById('whatsBtn');
     const whatsContainer = document.getElementById('whatsContainer');
-    const closeButtons = document.querySelectorAll('.close-btn');
-
-    const pageWrapper = document.getElementById('page_wrapper');
-    if (pageWrapper) pageWrapper.appendChild(whatsWrapper);
+    const whatsCloseButton = document.getElementById('whatsCloseButton');
+    
 
     whatsButton.addEventListener('click', () => {
-        whatsButton.classList.add('d-none');
+        whatsButton.classList.add('whats-d-none');
         whatsContainer.classList.add('show-whats');
     });
 
-    closeButtons.forEach(closeButton => {
-        closeButton.addEventListener('click', () => {
-            whatsButton.classList.remove('d-none');
-            whatsContainer.classList.remove('show-whats');
-        });
+    whatsCloseButton.addEventListener('click', () => {
+        whatsButton.classList.remove('whats-d-none');
+        whatsContainer.classList.remove('show-whats');
     });
 
     const getHref = (isMobile, number, type, city) => `https://${isMobile ? 'api' : 'web'}.whatsapp.com/send?l=es&phone=${number}&text=Ingresa tu nombre y asunto para ser atendido por un asesor de ${type} de Proximédica ${city}`;
